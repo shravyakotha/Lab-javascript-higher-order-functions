@@ -1,13 +1,10 @@
 //1
 
-const foods = ["pizza", "burger", "fingerChips", "donuts", "springRoll"];
-const modifiedFood = foods.slice(1,4);
-console.log(modifiedFood);
+let foods = ["pizza", "burger", "fingerChips", "donuts", "springRoll"];
+console.log(foods.slice(1,-1));
 
 //2
-var foods1 = ["pizza", "burger", "fingerChips", "donuts", "springRoll"];
-var modifiedFood1 = foods1.splice(1,0,"noodles", "icecream");
-console.log(modifiedFood1);
+console.log(foods.splice(1,0,"noodles", "icecream"));
 
 //3
 let numberArray = ["12","324","213","4","2","3","45","4234"];
@@ -32,26 +29,26 @@ console.log(isPrime);
 
 //4
 let numberArray1 = ["12","324","213","4","2","3","45","4234"];
-let nonPrime = numberArray1.reject(function(numberArray1){
+let nonPrime = numberArray1.filter(function(numberArray1){
 
 
     for(var i=2;i<=numberArray1/2;i++)
 {
     if(numberArray1 % i===0){
-        return false;
+        return true;
     }
     }
-return true;  
+return false;  
 });
 console.log(nonPrime);
 
 //5
 
+var even = function (numberArray) {
+    return  numberArray% 2 == 0
+}
 
-let isEvenn= (numberArray) => 
-     (numberArray % 2) == 0;
-
-console.log(isEvenn);
+console.log(even(numberArray));
 
 //6
 
